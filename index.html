@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 学习助手 —— 教你用 AI 做出东西的离线桌面软件</title>
+<meta name="description" content="AI 学习助手是一个 Windows 桌面软件：58 个真实项目教程、114 款 AI 工具深度介绍、30 篇关键技能。默认不联网，不收集任何数据。">
+<meta name="theme-color" content="#0A1124">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/png;base64,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">
+<style>
+/* ============================================================
+   设计令牌
+   ------------------------------------------------------------
+   采用了几条：
+   * 8pt 间距节奏（4/8/16/24/32/48/64），纵向层级清晰
+   * 语义化颜色令牌，不逐屏硬编码 hex
+   * 圆角分级（sm/md/lg/xl），卡片与按钮不同档
+   * 阴影分级（sm/md/lg/glow），hover 抬升用 transform+opacity
+   * 不用纯黑 #000，深色区用带蓝的墨色，避免 OLED smear / 死黑
+
+   明确没采用的（与本项目约束冲突，理由写在这里防止以后照抄）：
+   * Inter 字体 + Google Fonts：官网坚持零外部请求，不把访客 IP 送给
+     fonts.googleapis.com。中文也轮不到 Inter 出场，正文用系统字体更稳。
+   * AI 紫 #7C3AED 主色：本软件是"离线、克制、可信"的工程工具，
+     紫色偏消费级 AI 玩具，且与已有的深蓝图标、软件内配色不统一。
+     保留深蓝主色，紫色只作极少量强调。
+   * 动效编排（GSAP 时间线 / 页面转场）：单页静态站用不到路由转场，
+     且引入外部脚本会破坏零依赖。只用 CSS，并完整支持 reduced-motion。
+   ============================================================ */
+:root{
+  /* 间距 8pt 节奏 */
+  --s1:4px; --s2:8px; --s3:16px; --s4:24px; --s5:32px; --s6:48px; --s7:64px;
+
+  /* 语义色 */
+  --bg:#F5F7FC;
+  --surface:#FFFFFF;
+  --surface-2:#FBFCFE;
+  --ink:#131E36;
+  --ink-2:#41506B;
+  --muted:#5F6B80;
+  --line:#E4E9F3;
+  --line-strong:#D3DBEA;
+  --brand:#2563EB;
+  --brand-ink:#1D4ED8;
+  --brand-soft:#EEF3FE;
+  --accent:#7C3AED;
+
+  /* 深色区 */
+  --dark-1:#0A1124;
+  --dark-2:#101B36;
+  --dark-3:#1B3268;
+  --on-dark-2:#A9B7D0;
+
+  /* 圆角分级 */
+  --r-sm:8px; --r-md:12px; --r-lg:16px; --r-xl:22px;
+
+  /* 阴影分级 */
+  --sh-sm:0 1px 2px rgba(16,26,46,.05), 0 2px 8px rgba(16,26,46,.04);
+  --sh-md:0 2px 6px rgba(16,26,46,.06), 0 10px 28px rgba(16,26,46,.08);
+  --sh-lg:0 4px 12px rgba(16,26,46,.07), 0 22px 54px rgba(16,26,46,.13);
+  --sh-brand:0 8px 26px rgba(37,99,235,.30);
+
+  /* 动效令牌（时长按距离/复杂度分档，不搞一刀切） */
+  --ease:cubic-bezier(.16,1,.3,1);
+  --t-fast:140ms; --t-base:240ms; --t-slow:520ms;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Microsoft YaHei UI","Microsoft YaHei","PingFang SC","Noto Sans CJK SC",system-ui,sans-serif;
+  line-height:1.75; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:0 var(--s4)}
+a{color:var(--brand); text-decoration:none}
+
+/* 焦点可见：键盘用户必须能看清当前位置（不能只靠浏览器默认描边，
+   深色区默认描边几乎看不见）。 */
+:where(a,button,[tabindex]):focus-visible{
+  outline:2px solid var(--brand); outline-offset:3px; border-radius:4px;
+}
+.hero :where(a,button):focus-visible,
+.privacy :where(a,button):focus-visible{outline-color:#8FB0FF}
+/* 跳转到主内容：键盘/读屏用户第一个 Tab 就能跳过导航 */
+.skip{
+  position:absolute; left:-9999px; top:0; z-index:100;
+  background:var(--brand); color:#fff; padding:10px 16px; border-radius:0 0 var(--r-sm) 0;
+}
+.skip:focus{left:0}
+
+/* ---------- 顶栏 ---------- */
+header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,.78);
+  backdrop-filter:blur(14px) saturate(1.4);
+  border-bottom:1px solid rgba(228,233,243,.9);
+}
+.nav{display:flex; align-items:center; gap:var(--s2); height:64px}
+.logo{width:32px; height:32px; border-radius:9px; flex:none; box-shadow:var(--sh-sm)}
+.nav .name{font-weight:700; font-size:16px; letter-spacing:.2px; color:var(--ink)}
+.nav nav{margin-left:auto; display:flex; gap:var(--s1); align-items:center}
+/* nav 链接做成 40px 高的胶囊，触摸目标够大（WCAG 2.2 要求 ≥24px） */
+.nav nav a{
+  color:var(--ink-2); font-size:14px; padding:8px 12px; border-radius:var(--r-sm);
+  transition:background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+.nav nav a:hover{color:var(--brand); background:var(--brand-soft)}
+.nav .nav-cta{
+  background:var(--brand); color:#fff; font-weight:600; padding:9px 16px;
+  box-shadow:var(--sh-sm); margin-left:var(--s2);
+}
+.nav .nav-cta:hover{background:var(--brand-ink); color:#fff}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative; overflow:hidden; color:#fff;
+  padding:clamp(56px,8vw,92px) 0 clamp(76px,9vw,96px);
+  background:
+    radial-gradient(1100px 520px at 78% -6%, rgba(56,116,255,.36), transparent 62%),
+    radial-gradient(760px 420px at 8% 108%, rgba(124,58,237,.22), transparent 66%),
+    linear-gradient(168deg, var(--dark-1) 0%, var(--dark-2) 52%, var(--dark-3) 100%);
+}
+/* 细网格纹理：给深色大平面一点"工程感"，很淡，不抢文字 */
+.hero::before{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(ellipse 78% 66% at 50% 34%, #000 35%, transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 78% 66% at 50% 34%, #000 35%, transparent 78%);
+}
+/* 环境光斑：缓慢漂浮，只动 transform/opacity（不触发布局重排） */
+.hero::after{
+  content:""; position:absolute; width:640px; height:640px; right:-190px; top:-300px;
+  border-radius:50%; pointer-events:none;
+  background:radial-gradient(circle, rgba(72,132,255,.30), transparent 66%);
+  animation:float 16s ease-in-out infinite alternate;
+}
+@keyframes float{ from{transform:translate3d(0,0,0) scale(1)} to{transform:translate3d(-40px,34px,0) scale(1.09)} }
+.hero .wrap{position:relative; z-index:1}
+.badge{
+  display:inline-flex; align-items:center; gap:var(--s2); font-size:13px;
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.15);
+  padding:6px 14px; border-radius:999px; color:#CBD7EC;
+  backdrop-filter:blur(8px);
+}
+.badge .dot{
+  width:6px; height:6px; border-radius:50%; background:#4ADE80;
+  box-shadow:0 0 0 3px rgba(74,222,128,.16);
+}
+.hero h1{
+  font-size:clamp(29px,4.6vw,50px); line-height:1.24; letter-spacing:0;
+  margin:var(--s4) 0 var(--s3); font-weight:800; max-width:15em;
+}
+/* 渐变文字：brand 蓝 → 亮蓝 → 淡紫，跨行时保持连贯 */
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(96deg,#93B4FF 0%,#C4B5FD 52%,#7DD3FC 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  -webkit-text-fill-color:transparent;
+}
+/* 兜底：不支持 background-clip:text 的旧环境退回纯色，不能变成透明字 */
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero h1 em{-webkit-text-fill-color:#A7BFFF; color:#A7BFFF; background:none}
+}
+.hero p.lead{
+  font-size:clamp(15px,2.1vw,17.5px); color:var(--on-dark-2);
+  max-width:38em; margin:0 0 var(--s5); line-height:1.8;
+}
+.cta{display:flex; gap:var(--s3); flex-wrap:wrap; align-items:center}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  min-height:48px; padding:0 var(--s5); border-radius:var(--r-md);
+  font-weight:700; font-size:15px; border:1px solid transparent;
+  transition:transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease),
+             box-shadow var(--t-base) var(--ease), border-color var(--t-fast) var(--ease);
+}
+.btn-primary{background:var(--brand); color:#fff; box-shadow:var(--sh-brand)}
+/* hover 底色 #2F6FE8 对白字 4.61:1（原 #3B78F0 只有 4.09:1） */
+.btn-primary:hover{
+  background:#2F6FE8; color:#fff; transform:translateY(-2px);
+  box-shadow:0 12px 34px rgba(37,99,235,.42);
+}
+.btn-primary:active{transform:translateY(0) scale(.985)}
+.btn-ghost{
+  background:rgba(255,255,255,.06); color:#fff; border-color:rgba(255,255,255,.22);
+  backdrop-filter:blur(8px);
+}
+.btn-ghost:hover{background:rgba(255,255,255,.13); color:#fff; transform:translateY(-2px)}
+.btn[aria-disabled="true"]{pointer-events:none; user-select:none}
+.hero .note{
+  font-size:13px; color:#8D9CB8; margin-top:var(--s4);
+  display:flex; align-items:center; gap:var(--s2); flex-wrap:wrap;
+}
+.hero .note .sep{opacity:.45}
+
+/* ---------- 数据条（浮起卡片） ---------- */
+.stats{
+  display:grid; grid-template-columns:repeat(4,1fr);
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--r-xl); overflow:hidden;
+  margin:calc(var(--s6) * -1) 0 0; position:relative; z-index:2;
+  box-shadow:var(--sh-lg);
+}
+.stat{padding:var(--s4) var(--s3); text-align:center; position:relative}
+.stat + .stat::before{
+  content:""; position:absolute; left:0; top:22%; bottom:22%; width:1px; background:var(--line);
+}
+.stat b{
+  display:block; font-size:clamp(26px,3.4vw,34px); line-height:1.15; font-weight:800;
+  color:var(--ink); letter-spacing:0;
+  font-variant-numeric:tabular-nums;
+}
+.stat span{display:block; margin-top:var(--s1); font-size:13px; color:var(--muted)}
+
+/* ---------- 通用区块 ---------- */
+section{padding:var(--s7) 0}
+section.alt{
+  background:linear-gradient(180deg,var(--surface-2),var(--surface) 40%,var(--surface-2));
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
+h2{
+  font-size:clamp(22px,3.2vw,31px); margin:0 0 var(--s2); letter-spacing:0;
+  font-weight:800; line-height:1.35;
+}
+.sub{color:var(--ink-2); margin:0 0 var(--s6); font-size:15.5px; max-width:42em}
+
+/* ---------- 卡片 ---------- */
+.grid{display:grid; gap:var(--s3)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{
+  position:relative; background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--r-lg); padding:var(--s5);
+  box-shadow:var(--sh-sm);
+  transition:transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease),
+             border-color var(--t-base) var(--ease);
+}
+.card:hover{transform:translateY(-3px); box-shadow:var(--sh-md); border-color:var(--line-strong)}
+section.alt .card{background:var(--surface)}
+.card h3{
+  margin:0 0 var(--s2); font-size:16.5px; font-weight:700;
+  display:flex; align-items:center; gap:10px; line-height:1.5;
+}
+.card p{margin:0; color:var(--ink-2); font-size:14px; line-height:1.8}
+
+/* 图标底板：统一尺寸令牌，线性/填充不混用，与文字基线对齐 */
+.ico{
+  flex:none; display:inline-block; vertical-align:middle;
+}
+.ico-box{
+  width:36px; height:36px; flex:none; display:inline-flex;
+  align-items:center; justify-content:center; border-radius:10px;
+  background:var(--brand-soft); color:var(--brand);
+}
+.card h3 .ico-box{margin-top:-2px}
+
+/* ---------- 标签 ---------- */
+.tags{display:flex; flex-wrap:wrap; gap:var(--s2); margin-top:var(--s4)}
+.tag{
+  background:#F1F4FA; color:#46566F; font-size:12.5px; padding:4px 10px;
+  border-radius:7px; border:1px solid #E8EDF6; line-height:1.7;
+}
+.tag b{color:var(--brand); margin-left:5px; font-weight:700; font-variant-numeric:tabular-nums}
+
+/* ---------- 入门项目 ---------- */
+.picks{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--s3)}
+.pick{
+  display:flex; flex-direction:column; position:relative;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md);
+  padding:var(--s4); color:inherit; box-shadow:var(--sh-sm);
+  transition:transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease),
+             border-color var(--t-base) var(--ease);
+}
+.pick:hover{
+  border-color:#BFD2F6; transform:translateY(-3px); box-shadow:var(--sh-md);
+}
+/* 右上角箭头：暗示"可点"，hover 时轻微位移 */
+.pick-arrow{
+  position:absolute; right:14px; top:14px; color:#B8C4D8;
+  transition:transform var(--t-base) var(--ease), color var(--t-base) var(--ease);
+}
+.pick:hover .pick-arrow{color:var(--brand); transform:translate(2px,-2px)}
+.pick-cat{
+  display:inline-block; align-self:flex-start; font-size:11.5px; font-weight:700;
+  color:var(--brand); background:var(--brand-soft); padding:2px 9px; border-radius:6px;
+  margin-bottom:var(--s2); letter-spacing:.2px;
+}
+.pick-title{font-size:14.5px; font-weight:600; line-height:1.6; margin-bottom:var(--s3); flex:1; color:var(--ink)}
+.pick-meta{
+  font-size:12.5px; color:var(--muted); padding-top:var(--s2);
+  border-top:1px solid var(--line); display:flex; align-items:center; gap:6px;
+}
+
+/* ---------- 隐私（深色面板） ---------- */
+.privacy{
+  position:relative; overflow:hidden; color:#fff; border-radius:var(--r-xl);
+  padding:clamp(32px,5vw,52px);
+  background:
+    radial-gradient(620px 320px at 92% 4%, rgba(52,211,153,.20), transparent 62%),
+    linear-gradient(158deg,#08221A 0%,#0E3327 56%,#12402F 100%);
+  box-shadow:var(--sh-lg);
+}
+.privacy h2{color:#fff; position:relative}
+.privacy .sub{color:#8FD9BE; position:relative}
+.priv-list{display:grid; grid-template-columns:repeat(2,1fr); gap:var(--s4) var(--s6);
+  margin-top:var(--s5); position:relative}
+.priv{display:flex; gap:var(--s3); align-items:flex-start}
+.priv .k{
+  flex:none; width:34px; height:34px; border-radius:9px; display:inline-flex;
+  align-items:center; justify-content:center;
+  background:rgba(143,217,190,.13); color:#8FD9BE; border:1px solid rgba(143,217,190,.2);
+}
+.priv b{display:block; font-size:14.5px; margin-bottom:2px; color:#EAF6F1}
+.priv span{font-size:13.5px; color:#A7D8C6; line-height:1.7}
+
+/* ---------- 下载 ---------- */
+.dl-box{
+  position:relative; overflow:hidden; text-align:center;
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--r-xl); padding:clamp(36px,6vw,64px) var(--s5);
+  box-shadow:var(--sh-md);
+}
+/* 顶部一道品牌渐变细线，让"终点区块"有收束感 */
+.dl-box::before{
+  content:""; position:absolute; left:0; right:0; top:0; height:3px;
+  background:linear-gradient(90deg,var(--brand),var(--accent),#22D3EE);
+}
+.dl-box h2{margin-bottom:var(--s2)}
+.dl-actions{display:flex; gap:var(--s3); justify-content:center; flex-wrap:wrap; margin-top:var(--s5)}
+.btn-lg{min-height:54px; padding:0 var(--s6); font-size:16px}
+.btn-outline{
+  background:var(--surface); color:var(--brand); border-color:var(--line-strong);
+  box-shadow:var(--sh-sm);
+}
+.btn-outline:hover{background:var(--brand-soft); border-color:#BFD2F6; color:var(--brand-ink);
+  transform:translateY(-2px)}
+.small{font-size:13px; color:var(--muted)}
+.req{
+  display:flex; gap:var(--s2) var(--s5); justify-content:center; flex-wrap:wrap;
+  margin-top:var(--s5); padding-top:var(--s5); border-top:1px solid var(--line);
+  font-size:13px; color:var(--muted);
+}
+.req b{color:var(--ink-2); font-weight:600}
+
+/* ---------- 页脚 ---------- */
+footer{
+  padding:var(--s6) 0 var(--s7); color:var(--muted); font-size:13px;
+  border-top:1px solid var(--line); background:var(--surface);
+}
+footer .frow{display:flex; gap:var(--s3); flex-wrap:wrap; justify-content:space-between;
+  align-items:center}
+footer a{color:var(--ink-2)}
+footer a:hover{color:var(--brand)}
+
+/* ---------- 滚动显现 ----------
+   只动 opacity/transform（不触发重排）。默认可见是刻意选择：
+   若 JS 失败或浏览器不支持 IntersectionObserver，内容必须照常显示，
+   不能因为"动画没跑"而整页空白。 */
+.reveal{ }
+@media (prefers-reduced-motion: no-preference){
+  .js-anim .reveal{
+    opacity:0; transform:translateY(18px);
+    transition:opacity var(--t-slow) var(--ease), transform var(--t-slow) var(--ease);
+    will-change:opacity, transform;
+  }
+  .js-anim .reveal.in{opacity:1; transform:none; will-change:auto}
+}
+/* 尊重系统"减少动态"设置：动画全部关闭，直接给最终可读状态 */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.001ms !important; animation-iteration-count:1 !important;
+    transition-duration:.001ms !important; scroll-behavior:auto !important;
+  }
+  .reveal{opacity:1 !important; transform:none !important}
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:860px){
+  .g3,.picks{grid-template-columns:repeat(2,1fr)}
+  .priv-list{grid-template-columns:1fr}
+  .nav nav a.opt{display:none}
+  .card{padding:var(--s4)}
+}
+/* 4 列在 860px 仍放得下，下一档才降成 2 列；否则平板宽度过早变窄 */
+@media (max-width:700px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3)::before{display:none}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .stat + .stat{padding-left:var(--s2)}
+}
+@media (max-width:560px){
+  .g2,.g3,.picks{grid-template-columns:1fr}
+  .wrap{padding:0 var(--s3)}
+  section{padding:var(--s6) 0}
+  .hero{padding:var(--s6) 0 calc(var(--s6) + var(--s4))}
+  /* 窄屏上让标题自然折行：硬编码 <br> 会与自动换行打架，出现参差的 1 行 / 2 行 */
+  .hero h1 br{display:none}
+  .hero h1{max-width:none}
+  .cta{width:100%}
+  .cta .btn{flex:1 1 auto}
+  /* 两列时格子只有 ~148px 文字宽，「个可执行步骤」会忽折忽不折，
+     导致四个格子高度不一、数字上下不齐。统一缩小字号并允许均衡断行。 */
+  .stats{border-radius:var(--r-lg); margin-top:calc(var(--s5) * -1)}
+  .stat{padding:var(--s3) var(--s2)}
+  .stat b{font-size:23px}
+  .stat span{font-size:12px; text-wrap:balance}
+  .nav .nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header>
+  <div class="wrap nav">
+    <img class="logo" src="data:image/png;base64,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" alt="AI 学习助手图标" width="32" height="32">
+    <span class="name">AI 学习助手</span>
+    <nav aria-label="主导航">
+      <a href="#what">内容</a>
+      <a href="#start" class="opt">上手</a>
+      <a href="#privacy" class="opt">隐私</a>
+      <a href="#download" class="nav-cta">下载</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero">
+  <div class="wrap">
+    <span class="badge"><span class="dot" aria-hidden="true"></span>版本 2.6.0 · Windows 免安装</span>
+    <h1>不是告诉你 AI 有多强，<br>而是教你<em>用它把东西做出来</em>。</h1>
+    <p class="lead">
+      58 个真实项目、114 款工具深度介绍、30 篇关键技能，全部离线内置。
+      每一步都写清「做什么、为什么这么做、出问题怎么查」，配可直接复制的提示词。
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/crabsmy123/AI-learning/releases/latest"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 18v2a1 1 0 001 1h14a1 1 0 001-1v-2"/></svg> 下载 Windows 版</a>
+      <a class="btn btn-ghost" href="#what">看看里面有什么</a>
+    </div>
+    <div class="note">
+      <span>默认不联网</span><span class="sep" aria-hidden="true">·</span>
+      <span>不收集任何数据</span><span class="sep" aria-hidden="true">·</span>
+      <span>解压即用</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>58</b><span>个实战项目</span></div>
+    <div class="stat"><b>462</b><span>个可执行步骤</span></div>
+    <div class="stat"><b>114</b><span>款 AI 工具</span></div>
+    <div class="stat"><b>30</b><span>篇关键技能</span></div>
+  </div>
+</div>
+
+<section id="what">
+  <div class="wrap">
+    <h2>里面到底有什么</h2>
+    <p class="sub">四层内容互相咬合：先看工具选哪个，再跟项目做出来，卡住时查技能篇。</p>
+
+    <div class="grid g2">
+      <div class="card reveal">
+        <h3><span class="ico-box"><svg class="ico" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 20l-5.5 2.5V6L9 3.5m0 16.5l6 2.5m-6-2.5V3.5m6 19l5.5-2.5V3.5L15 6m0 16.5V6m0 0L9 3.5"/></svg></span>项目教程 · 58 个</h3>
+        <p>每个项目都有目标、准备清单、分步操作、可复制提示词、验收清单和踩坑提醒。
+           58 个项目还附赠「起步工程」，一键导出就能跑。</p>
+        <div class="tags"><span class="tag">游戏与互动<b>8</b></span><span class="tag">AI 与智能体<b>7</b></span><span class="tag">后端开发<b>6</b></span><span class="tag">学习教育<b>5</b></span><span class="tag">前端开发<b>5</b></span><span class="tag">数据分析<b>5</b></span><span class="tag">自动化办公<b>4</b></span><span class="tag">商业与营销<b>3</b></span><span class="tag">设计创意<b>3</b></span><span class="tag">图像与视频<b>3</b></span><span class="tag">移动应用<b>3</b></span><span class="tag">办公文档<b>2</b></span><span class="tag">音频与音乐<b>2</b></span><span class="tag">写作与自媒体<b>2</b></span></div>
+      </div>
+      <div class="card reveal">
+        <h3><span class="ico-box"><svg class="ico" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 01-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 015.4-5.4l-2.5 2.5m-1.9-1.9l2.5-2.5"/></svg></span>AI 工具库 · 114 款</h3>
+        <p>不罗列参数，讲清「什么情况下该选它、什么情况下别选它」。
+           标注国内访问与付费模式，价格只写档位，不写会过期的具体金额。</p>
+        <div class="tags"><span class="tag">AI 编程与开发<b>19</b></span><span class="tag">游戏与互动<b>10</b></span><span class="tag">对话与通用助手<b>8</b></span><span class="tag">AI 绘画与图像<b>8</b></span><span class="tag">AI 视频生成<b>8</b></span><span class="tag">图像后期与工具<b>8</b></span><span class="tag">开源与本地部署<b>8</b></span><span class="tag">智能体与工作流<b>7</b></span><span class="tag">学习与教育<b>7</b></span><span class="tag">AI 音频与音乐<b>6</b></span><span class="tag">数据分析与科研<b>6</b></span><span class="tag">写作与办公<b>5</b></span><span class="tag">演示与设计<b>5</b></span><span class="tag">AI 搜索与研究<b>5</b></span><span class="tag">AI 数字人与配音<b>4</b></span></div>
+      </div>
+      <div class="card reveal">
+        <h3><span class="ico-box"><svg class="ico" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.4.3.6.8.6 1.3h6c0-.5.2-1 .6-1.3A6 6 0 0012 3z"/></svg></span>关键技能 · 30 篇</h3>
+        <p>提示词、结构化输出、知识库 RAG、AI 编程、绘画与视频提示词、数据分析、
+           GitHub、游戏开发、DeepSeek Harness 专题等，讲机制与判断依据。</p>
+      </div>
+      <div class="card reveal">
+        <h3><span class="ico-box"><svg class="ico" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h9a3 3 0 000-6H9a3 3 0 010-6h11M17 4l3 3-3 3"/></svg></span>学习路线 · 5 条</h3>
+        <p>按人群规划：零基础入门、职场效率、内容创作、开发者、学生研究者。
+           每条路线分阶段推进，每天知道该做什么。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="start">
+  <div class="wrap">
+    <h2>不知道从哪开始？挑一个今天就能做完的</h2>
+    <p class="sub">下面这些都标为「入门」，步骤最少的那几个 —— 今晚就能看到结果。</p>
+    <div class="picks"><a class="pick reveal" href="#download">
+      <span class="pick-arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+      <div class="pick-cat">游戏与互动</div>
+      <div class="pick-title">用 Phaser 3 + AI 做一个能发链接给人玩的网页小游戏</div>
+      <div class="pick-meta"><svg class="ico" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h6M4 12h10M4 18h14"/></svg> 6 步完成 · 入门</div>
+    </a><a class="pick reveal" href="#download">
+      <span class="pick-arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+      <div class="pick-cat">游戏与互动</div>
+      <div class="pick-title">不写代码做一个完整的短游戏：RPG Maker / GameMaker 路线</div>
+      <div class="pick-meta"><svg class="ico" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h6M4 12h10M4 18h14"/></svg> 7 步完成 · 入门</div>
+    </a><a class="pick reveal" href="#download">
+      <span class="pick-arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+      <div class="pick-cat">数据分析</div>
+      <div class="pick-title">用 AI 做一份 Excel 销售数据清洗与可视化分析报告</div>
+      <div class="pick-meta"><svg class="ico" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h6M4 12h10M4 18h14"/></svg> 7 步完成 · 入门</div>
+    </a><a class="pick reveal" href="#download">
+      <span class="pick-arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+      <div class="pick-cat">前端开发</div>
+      <div class="pick-title">用 AI 做出个人作品集网站</div>
+      <div class="pick-meta"><svg class="ico" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h6M4 12h10M4 18h14"/></svg> 7 步完成 · 入门</div>
+    </a><a class="pick reveal" href="#download">
+      <span class="pick-arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+      <div class="pick-cat">音频与音乐</div>
+      <div class="pick-title">用 AI 生成一首原创歌曲，并发布到音乐平台</div>
+      <div class="pick-meta"><svg class="ico" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h6M4 12h10M4 18h14"/></svg> 7 步完成 · 入门</div>
+    </a><a class="pick reveal" href="#download">
+      <span class="pick-arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+      <div class="pick-cat">AI 与智能体</div>
+      <div class="pick-title">用 Dify / Coze 搭建企业知识库客服机器人（RAG）</div>
+      <div class="pick-meta"><svg class="ico" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h6M4 12h10M4 18h14"/></svg> 7 步完成 · 入门</div>
+    </a></div>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap">
+    <div class="privacy reveal">
+      <h2><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10V7a6 6 0 1112 0v3M5 10h14a1 1 0 011 1v10a1 1 0 01-1 1H5a1 1 0 01-1-1V11a1 1 0 011-1z"/></svg>关于隐私，说得具体一点</h2>
+      <p class="sub">「我们没有收集你的数据」这种话谁都会说。这里写清楚它到底做了什么。</p>
+      <div class="priv-list">
+        <div class="priv"><span class="k"><svg class="ico" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2l20 20M8.5 8.5a11 11 0 0110 2M5 12a15 15 0 013.5-2.2M12 20h.01M8.5 15.5a6 6 0 016 0"/></svg></span><div>
+          <b>默认不联网</b><span>打开软件、学完一整天，都可以在完全断网的状态下进行，功能一个不少。</span></div></div>
+        <div class="priv"><span class="k"><svg class="ico" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 18a7 7 0 100-14 7 7 0 000 14zm10 3l-5-5"/></svg></span><div>
+          <b>唯一的联网是你点「检查更新」</b><span>不点就永远不联网。这个请求只发送版本号，不发送任何学习记录、笔记或个人信息。</span></div></div>
+        <div class="priv"><span class="k"><svg class="ico" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8c4.4 0 8-1.3 8-3s-3.6-3-8-3-8 1.3-8 3 3.6 3 8 3zM4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span><div>
+          <b>数据只在你本机</b><span>学习进度、笔记、提示词保存在你自己的电脑上，不上传、不同步、不需要账号。</span></div></div>
+        <div class="priv"><span class="k"><svg class="ico" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zM3 12h18M12 3a15 15 0 010 18 15 15 0 010-18z"/></svg></span><div>
+          <b>官网链接交给系统浏览器</b><span>点工具官网时用你熟悉的浏览器打开，软件本身不加载任何网页。</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>内容会过时，所以它标了日期</h2>
+    <p class="sub">AI 行业三个月就换一批工具。与其假装什么都是最新的，不如把「什么时候核对的」摆出来。</p>
+    <div class="grid g3">
+      <div class="card reveal">
+        <h3><span class="ico-box"><svg class="ico" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zM12 7v5l3 2"/></svg></span>每条都有核对日期</h3>
+        <p>114 款工具与 30 篇技能全部标注「信息核对于 YYYY-MM」，
+           并写清那次核对的是价格档位还是国内可访问性。</p>
+      </div>
+      <div class="card reveal">
+        <h3><span class="ico-box"><svg class="ico" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 3.9L2.5 17a2 2 0 001.7 3h15.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg></span>超过一年会变警示色</h3>
+        <p>条目超过 12 个月没核对，详情页会自动提示「信息可能已过时」，
+           而不是让你以为它永远准确。</p>
+      </div>
+      <div class="card reveal">
+        <h3><span class="ico-box"><svg class="ico" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v3m10-3v3M4 8h16M5 21h14a1 1 0 001-1V6a1 1 0 00-1-1H5a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg></span>每月更新</h3>
+        <p>按月发版，持续补新工具、修过时信息。软件里点「检查更新」就能知道有没有新版。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <div class="dl-box reveal">
+      <h2>下载 AI 学习助手</h2>
+      <p class="sub" style="margin:0 auto var(--s2); text-align:center">Windows 10 / 11 · 免安装 · 解压即用</p>
+      <div class="dl-actions">
+        <a class="btn btn-primary" href="https://github.com/crabsmy123/AI-learning/releases/latest"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 18v2a1 1 0 001 1h14a1 1 0 001-1v-2"/></svg> 下载 Windows 版</a>
+      </div>
+      <p class="small" style="margin-top:var(--s3); max-width:34em; margin-left:auto; margin-right:auto">
+        推荐使用免解压版：解压后双击 exe 即可运行。若被安全软件拦截，请允许运行 —— 本软件不含任何联网下载行为。
+      </p>
+      <div class="req">
+        <span><b>系统</b> Windows 10 / 11</span>
+        <span><b>体积</b> 约 34 MB（免解压版）</span>
+        <span><b>安装</b> 不需要</span>
+        <span><b>联网</b> 默认关闭</span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <span>AI 学习助手 · v2.6.0</span>
+    <span>内容核对于 2026-02 · AI 工具变化较快，请以各工具官网为准</span>
+  </div>
+</footer>
+
+<script>
+/* 滚动显现。三条必须：
+   1) 先给 <html> 加 js-anim 才启用初始隐藏态 —— 否则 JS 挂了整页不可见；
+   2) 不支持 IntersectionObserver 时直接不隐藏；
+   3) reduced-motion 下 CSS 已把动画时长压到 0，这里仍照常加 .in，保证内容可见。 */
+(function () {
+  try {
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) return;
+    document.documentElement.classList.add('js-anim');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    els.forEach(function (el) { io.observe(el); });
+    /* 兜底：1.2s 后强制全部可见，防止观察器异常导致内容永久隐藏 */
+    setTimeout(function () {
+      document.querySelectorAll('.reveal:not(.in)').forEach(function (el) {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+      });
+    }, 1200);
+  } catch (err) {
+    document.documentElement.classList.remove('js-anim');
+  }
+})();
+</script>
+
+</body>
+</html>
